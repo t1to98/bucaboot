@@ -1,34 +1,36 @@
-/* !============================================= */
+// =============================================
 
-/* ! Variables						  			  */ 
+// Variables						  			  
 
-/* !============================================= */
+// =============================================
 
-/* !-- Universal ------------------------------------ */
+// Project ------------------------------------ //
 
-$black-5: #f5f5f5;
-$black-10: #ededed;
-$black-15: #ccc;
-$black-50: #999;
-$black-75: #666; 
-$black-90: #222; 
-$black-95: #111; 
+$red: rgb(240,78,48);
+$blue: rgb(0,187,214);
+$blue-dark: rgb(31,32,52);
+$blue-dk: $blue-dark;
+$orange: rgb(244,121,32);
+$beige: rgb(255,254,242);
 
-$light-gray: $black-10;
-$med-gray: $black-50;
-$dark-gray: $black-75;
-$tease-txt: $black-75;
-$txt-black: $black-90;
-$text-black: $txt-black;
-
-/* !-- Project ------------------------------------ */
-
-$blue: #1d78af;
+$selection-color: $blue-dk;
+$selection-color-type: #FFF;
 
 $link: $blue;
 $link-hover: darken($link, 8%);
-$highlight: #ea4c88;  //Pink
+$highlight: $blue;  //Pink
+$bg: $beige; 
 
-$sans:Arial,Helvetica,Verdana,sans-serif;
+$sans:"Raleway",Arial,Helvetica,Verdana,sans-serif;
 $serif:Georgia,Times,Times New Roman,serif;
 $mono:"Courier New",Courier,mono;
+
+
+// Sizes ------------------------------------ //
+
+$break-sm: 420px;
+
+// Paths ------------------------------------ //
+
+$rgba-bg-path: "rgba-bg/";
+$svg-path: "icons/";
