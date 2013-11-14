@@ -1,0 +1,21 @@
+/* !============================================= */
+
+/* ! Custom Fonts					   			  */ 
+
+/* !============================================= */
+
+@mixin font-import {
+
+// Follow this format, y'hear: 
+
+@font-face { 
+	font-family: "Raleway Bold"; 
+	src: font-url('raleway/raleway-medium-webfont.eot');
+	src: font-url('raleway/raleway-medium-webfont?#iefix') format('embedded-opentype'),
+		 font-url('raleway/raleway-medium-webfont.woff') format('woff'), 
+		 font-url('raleway/raleway-medium-webfont.ttf') format('truetype'), 
+		 font-url('raleway/raleway-medium-webfont.svg#webfontABgg4EO0') format('svg'); }	
+}
+
+// Import custom fonts
+@include font-import;
