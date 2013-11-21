@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/screen.css">
 
-		<script type="text/javascript" src="/components/modernizr/modernizr.js"></script>
+		<script type="text/javascript" src="/bower_components/modernizr/modernizr.js"></script>
 
 		<!-- Google Webfonts -->
 		<script type="text/javascript">
@@ -40,7 +40,38 @@
 				<h2 class="intro-txt">Buca Boot combines the flexibility 
 of a bike basket with the storage security of a car trunk. Stop worrying about your stuff &amp; go!</h2>
 
-				<a class="ks-btn l-narrow" href="http://www.kickstarter.com/projects/bucaboot/680718219?token=1dcc70b2" target="_blank">Support us on Kickstarter!</a>
+				<!-- Buy Button -->
+
+				<div class="buy-mod">
+					<script type="text/javascript" src="https://static-na.payments-amazon.com/cba/js/us/PaymentWidgets.js"></script>
+					<script>
+					RenderCBAButton = function(ordervalue) {
+					var standard1 = new CBA.Widgets.StandardCheckoutWidget({
+					merchantId: "AXK2597FQ1JFS",
+					orderInput: {
+					format: "XML",
+					value: ordervalue}
+					}).render("cbaxmlButton");
+					}
+					</script>
+
+					<div id="cbaxmlButton" class="buy-btn-mod">
+ 						<img class="buy-btn" alt="Preorder Now!" src="https://payments.amazon.com/gp/cba/button?cartOwnerId=AXK2597FQ1JFS&size=medium&color=orange&background=white"/>
+						<p class="buy-btn-txt">Preorder Now!</p>
+					</div> <!-- /buy-btn-mod -->
+
+					<div class="buy-select">
+						<select name="order-input" ONCHANGE="javascript:RenderCBAButton(this.options[this.selectedIndex].value);">
+						<option value="type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+V29vZCBUb3AsIE5hdnkgQWNjZW50IENvbG9yPC9UaXRsZT48UHJpY2U+PEFtb3VudD4xOTU8L0Ftb3VudD48Q3VycmVuY3lDb2RlPlVTRDwvQ3VycmVuY3lDb2RlPjwvUHJpY2U+PFF1YW50aXR5PjE8L1F1YW50aXR5PjxGdWxmaWxsbWVudE5ldHdvcms+TUVSQ0hBTlQ8L0Z1bGZpbGxtZW50TmV0d29yaz48L0l0ZW0+PC9JdGVtcz48L0NhcnQ+PC9PcmRlcj4=;signature:4HN9pdtCIZHWXc/1fejgPHakV2k=">Wood Top, Navy Accent - $195</option><option value="type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+V29vZCBUb3AsIFJlZCBBY2NlbnQgQ29sb3I8L1RpdGxlPjxQcmljZT48QW1vdW50PjE5NTwvQW1vdW50PjxDdXJyZW5jeUNvZGU+VVNEPC9DdXJyZW5jeUNvZGU+PC9QcmljZT48UXVhbnRpdHk+MTwvUXVhbnRpdHk+PEZ1bGZpbGxtZW50TmV0d29yaz5NRVJDSEFOVDwvRnVsZmlsbG1lbnROZXR3b3JrPjwvSXRlbT48L0l0ZW1zPjwvQ2FydD48L09yZGVyPg==;signature:SQCS19cW8K5MNvWd4D7biRs9ERo=">Wood Top, Red Accent - $195</option><option value="type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+V29vZCBUb3AsIFN0ZWVsIEFjY2VudCBDb2xvcjwvVGl0bGU+PFByaWNlPjxBbW91bnQ+MTk1PC9BbW91bnQ+PEN1cnJlbmN5Q29kZT5VU0Q8L0N1cnJlbmN5Q29kZT48L1ByaWNlPjxRdWFudGl0eT4xPC9RdWFudGl0eT48RnVsZmlsbG1lbnROZXR3b3JrPk1FUkNIQU5UPC9GdWxmaWxsbWVudE5ldHdvcms+PC9JdGVtPjwvSXRlbXM+PC9DYXJ0PjwvT3JkZXI+;signature:n6nvq7/AUON6sh5MzN+0QpOO0Q0=">Wood Top, Steel Accent - $195</option><option value="type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+UGxhc3RpYyBUb3AsIE5hdnkgQWNjZW50IENvbG9yPC9UaXRsZT48UHJpY2U+PEFtb3VudD4xNDU8L0Ftb3VudD48Q3VycmVuY3lDb2RlPlVTRDwvQ3VycmVuY3lDb2RlPjwvUHJpY2U+PFF1YW50aXR5PjE8L1F1YW50aXR5PjxGdWxmaWxsbWVudE5ldHdvcms+TUVSQ0hBTlQ8L0Z1bGZpbGxtZW50TmV0d29yaz48L0l0ZW0+PC9JdGVtcz48L0NhcnQ+PC9PcmRlcj4=;signature:FgX+Gg3a5pek10rRaMteSG/hagc=">Plastic Top, Navy Accent - $145</option><option value="type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+UGxhc3RpYyBUb3AsIFJlZCBBY2NlbnQgQ29sb3I8L1RpdGxlPjxQcmljZT48QW1vdW50PjE0NTwvQW1vdW50PjxDdXJyZW5jeUNvZGU+VVNEPC9DdXJyZW5jeUNvZGU+PC9QcmljZT48UXVhbnRpdHk+MTwvUXVhbnRpdHk+PEZ1bGZpbGxtZW50TmV0d29yaz5NRVJDSEFOVDwvRnVsZmlsbG1lbnROZXR3b3JrPjwvSXRlbT48L0l0ZW1zPjwvQ2FydD48L09yZGVyPg==;signature:lb0zEorCNkR5cTMZQoD7DqGl/F4=">Plastic Top, Red Accent - $145</option><option value="type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+UGxhc3RpYyBUb3AsIFN0ZWVsIEFjY2VudCBDb2xvcjwvVGl0bGU+PFByaWNlPjxBbW91bnQ+MTQ1PC9BbW91bnQ+PEN1cnJlbmN5Q29kZT5VU0Q8L0N1cnJlbmN5Q29kZT48L1ByaWNlPjxRdWFudGl0eT4xPC9RdWFudGl0eT48RnVsZmlsbG1lbnROZXR3b3JrPk1FUkNIQU5UPC9GdWxmaWxsbWVudE5ldHdvcms+PC9JdGVtPjwvSXRlbXM+PC9DYXJ0PjwvT3JkZXI+;signature:KXsCjJ53sLk3PG1N2WJl1HtWyMM=">Plastic Top, Steel Accent - $145</option></select>
+					</div> <!-- /buy-selects -->
+
+					<small class="buy-msg">Powered by Amazon Payments</small>
+
+					<script language="javascript" type="text/javascript">
+					RenderCBAButton("type:cba-signed-order/sha1-hmac/2;order:PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48T3JkZXIgeG1sbnM9J2h0dHA6Ly9wYXltZW50cy5hbWF6b24uY29tL2NoZWNrb3V0LzIwMDgtMTEtMzAvJz48Q2FydD48SXRlbXM+PEl0ZW0+PE1lcmNoYW50SWQ+QVhLMjU5N0ZRMUpGUzwvTWVyY2hhbnRJZD48VGl0bGU+V29vZCBUb3AsIE5hdnkgQWNjZW50IENvbG9yPC9UaXRsZT48UHJpY2U+PEFtb3VudD4xOTU8L0Ftb3VudD48Q3VycmVuY3lDb2RlPlVTRDwvQ3VycmVuY3lDb2RlPjwvUHJpY2U+PFF1YW50aXR5PjE8L1F1YW50aXR5PjxGdWxmaWxsbWVudE5ldHdvcms+TUVSQ0hBTlQ8L0Z1bGZpbGxtZW50TmV0d29yaz48L0l0ZW0+PC9JdGVtcz48L0NhcnQ+PC9PcmRlcj4=;signature:4HN9pdtCIZHWXc/1fejgPHakV2k=");
+					</script>
+				</div> <!-- /buy-mod -->
+
 
 
 				<!-- Email Signup -->
@@ -73,19 +104,19 @@ of a bike basket with the storage security of a car trunk. Stop worrying about y
 
 
 		<!-- Core scripts-->
-		<script src="/components/jquery/jquery.min.js"></script>
-		<script src="/components/lodash/lodash.js"></script>
+		<!-- <script src="/bower_components/jquery/jquery.min.js"></script>
+		<script src="/bower_components/lodash/lodash.js"></script> -->
 
 		<!-- Compatibility scripts-->
 	
-	    <script src="components/respondjs/respond.min.js"></script>
+	    <script src="bower_components/respondjs/respond.min.js"></script>
 	
 
 		<!-- Extra scripts (like, via Bower)-->
 		<!-- ... -->
 		
 		<!-- Custom scripts -->
-		<script src="/js/app.js"></script>
+		<!-- <script src="/js/app.js"></script> -->
 
 		<!-- Google Analytics -->
 		<script>

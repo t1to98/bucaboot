@@ -132,6 +132,85 @@ body {
 }
 
 //
+// Buy Button
+//
+
+$buy-btn-width: 320px;
+
+.buy-mod {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.buy-btn-mod {
+	position: relative;
+	width: 100%;
+	max-width: $buy-btn-width;
+	height: 68px;
+	margin: 0 auto 20px;
+}
+
+.buy-btn-txt {
+	font: 700 23px/120% $sans;
+	padding: 15px 30px;
+	text-align: center;
+	display: block;
+	z-index: 10;
+	background-color: $red;
+	pointer-events: none; 
+	@include user-select(none);
+	@include absolute(5px 5px 5px 5px);
+	@include trans;
+	.buy-btn-mod:hover & {
+		top: 2px;
+	}
+}
+
+.buy-btn,
+#CBAWidgets0 {
+	@extend .ks-btn;
+	width: 100%;
+	height: 68px;
+	margin-bottom: 0;
+}
+
+.buy-select {
+	position: relative;
+	margin: 0 auto 10px;
+	width: 100%;
+	max-width: $buy-btn-width;
+
+	// Buy Dropdown Arrow
+	&:after {
+		@include psuedo(23px 16px n n);
+		@include triangle(down, 13px, #aaa, .73);
+		pointer-events: none; 
+		@include user-select(none);
+		width: 0;
+	}
+
+	select {
+		@include input-default;
+		width: 100%;
+		padding: 20px 50px 20px 20px;
+		background-color: #fff;
+		font: 500 15px $sans;
+		text-align: center;
+		@include border-radius(12px);
+	}
+
+
+}
+
+.buy-msg {
+	font: 500 10px $sans;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #e5e5e5;
+}
+
+
+//
 // Mailchimp Signup
 //
 
@@ -224,6 +303,29 @@ $mc-height: 45px;
 		@include svg('google-wht');
 	}
 }
+
+// 
+// Thanks Page
+//
+
+.page-thanks {
+	.logo-h {
+		max-width: 60%;
+	}
+}
+
+.thanks-txt {
+	text-align: center;
+	margin-bottom: 60px;
+	highlight {
+		display: block;
+		font-size: 36px;
+		line-height: 120%;
+		color: $red;
+		margin-bottom: 12px;
+	}
+}
+
 
 // 
 // Photo Page
