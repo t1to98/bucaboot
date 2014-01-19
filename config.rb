@@ -10,4 +10,4 @@ line_comments = false
 output_style = :compressed
 #:compressed :expanded
 
-add_import_path "bower_components/ups-sass-patterns"
+add_import_path "components/ups-sass-patterns"

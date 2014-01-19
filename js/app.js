@@ -22,10 +22,30 @@ var PrototypeModule = (function() {
 
 }());
 
-(function() {
+(function($) {
 	"use strict";
 
 	var proto = Object.create(PrototypeModule);
 	proto.init();
 
-}());
+
+	$(function() {
+
+		/////////////////
+		// Popups
+		/////////////////
+
+		$('.js-popup').magnificPopup();
+		$('.js-popup-iframe').magnificPopup({
+			type: 'iframe'
+			});
+
+		// Close modal when clicking away
+		$('body').on('click', '.close-modal', function(e){
+			$.magnificPopup.close();
+		});
+
+	});
+
+
+})(jQuery);
