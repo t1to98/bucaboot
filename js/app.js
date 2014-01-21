@@ -31,18 +31,51 @@ var PrototypeModule = (function() {
 
 	$(function() {
 
+		var $ww = $(window).width();
+		var $body = $('body');
+
 		/////////////////
 		// Popups
 		/////////////////
 
-		$('.js-popup').magnificPopup();
-		$('.js-popup-iframe').magnificPopup({
-			type: 'iframe'
-			});
+		// Only intialize on certain pages
+		if ($body.hasClass('page-hp')) {
+			$('.js-popup').magnificPopup();
+			$('.js-popup-iframe').magnificPopup({
+				type: 'iframe'
+				});
 
-		// Close modal when clicking away
-		$('body').on('click', '.close-modal', function(e){
-			$.magnificPopup.close();
+			// Close modal when clicking away
+			$('body').on('click', '.close-modal', function(e){
+				$.magnificPopup.close();
+			});
+		}
+
+
+		/////////////////
+		// Parallax
+		/////////////////
+
+		if ($ww >= 920 && $body.hasClass('page-hp')){
+			setTimeout(function(){
+				skrollr.init()
+			}, 300);	
+		}
+
+
+		/////////////////
+		// In View
+		/////////////////
+
+		// Remove hover animation class when not in view. 
+		// Fixes bug where fixed background images disappear. 
+		$('.intro-arrow').bind('inview', function(event, visible) {
+			var $this = $(this);
+			if (visible) {
+				$this.addClass('hover-anim');
+			} else {
+				$this.removeClass('hover-anim');				
+			}
 		});
 
 	});

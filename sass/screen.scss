@@ -16,19 +16,27 @@ em   	{	font-style: italic;	}
 i 		{  	font-style: normal; }
 
 body {
-	background-color: #000;
+	background-color: #fff;
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	overflow: hidden;
 }
 
 .page-hp {
+	position: relative;
+}
+
+.resp-img {
+	max-width: 100%;
+}
+
+.hp-intro {
 	background: #000 image-url('bucaboot-tight-bw.jpg') no-repeat 50% 50% fixed;
 	@include background-size(cover);
 	background-attachment: fixed;
 }
 
-.hp-content {
+.foreground {
 	margin: auto;
 	padding: 30px;
 	color: #fff;
@@ -40,7 +48,7 @@ body {
 	}	
 }
 
-.hp-content-inner {
+.foreground-inner {
 	margin: auto;
 	max-width: 450px;
 }
@@ -98,15 +106,29 @@ body {
 	}
 }
 
-.kickstarter-link {
+.intro-arrow {
 	display: block;
-	margin-top: 20px;
+	@include svg('arrow-down', no-cover);
+	@include background-size(75%);
+	width: 90%;
+	height: 0;
+	padding-bottom: 12%;
+	max-width: 100px;
+	margin: 0 auto 90px;
+	@include opacity(.7);
+	@include trans;
 }
 
-.caption-txt {
-	font: 500 em(16)/140% $sans;
-	margin-bottom: 40px;
+.hover-anim {
+	@include animation(hover 2s 3);	
 }
+
+// Fade In & Down
+@include keyframes(hover) {
+  0, 100%   { @include translate3d(0, -15px, 0); }
+  55% { @include translate3d(0, 15px, 0); }
+}
+
 
 .l-narrow {
 	max-width: 375px;
@@ -139,6 +161,37 @@ body {
 	}
 }
 
+
+//
+// Typography
+//
+
+.h2 {
+	font: 300 em(28)/120% $sans;
+	color: $navy;
+	margin-bottom: 8px;
+	@include mq($break-sm) {
+		font-size:em(36);
+	}
+}
+
+.highlight {
+	color: $red;
+}
+
+.txt {
+	font: 300 em(18)/150% $sans;
+	color: #666;
+	@include mq($break-sm) {
+		font-size:em(21);
+	}
+}
+
+.caption-txt {
+	font: 500 em(16)/140% $sans;
+	margin-bottom: 40px;
+}
+
 .section-h {
 	display: block;
 	margin-bottom: 10px;
@@ -148,6 +201,108 @@ body {
 	text-transform: uppercase;
 	@include text-shadow(rgba(0,0,0,.3) 1px 2px 3px);
 }
+
+//
+// Features
+//
+
+.site-width {
+	padding-left: $site-padding;
+	padding-right: $site-padding;
+}
+
+.l-feature {
+	padding: 60px $site-padding;
+	border-bottom: 1px solid #e5e5e5;
+
+	@include mq($break-sm) { 
+		padding: 80px 40px;
+	}
+
+	@include mq($break-lg) { 
+		padding: 100px 50px;
+	}
+
+}
+
+
+.l-feature-inner {
+	max-width: 600px;
+	margin: auto;	
+}
+
+.l-feature-cols,
+.l-feature-cols-flip {
+	@extend .l-feature-inner;
+	@include mq($break-lg) { 
+		max-width: 960px;
+	}
+}
+
+@include mq($break-lg) { 
+	.l-feature-cols {
+		@include ui-grid-2(50%, 50%, 0);
+		.ui-block-1 {
+			margin-top: -30px;
+			padding-right: 50px;
+		}
+	}
+	.l-feature-cols-flip {
+		@include ui-grid-rl(50%, 50%, 0);
+		.ui-block-1 {
+			margin-top: -30px;
+			padding-left: 50px;
+		}
+	}
+
+} //mq
+
+.slide-lifestyle,
+.slide-weather,
+.slide-secure {
+	.h2 {
+		color: $red;
+	}
+}
+
+.slide-handles {
+	position: relative;
+	padding-bottom: 75%;
+	margin-bottom: 0;
+	background: transparent image-url('slide-handles.jpg') 50% 100% no-repeat; 
+	@include background-size(contain);
+
+	@include mq($footer-fixes) {
+		height: 2000px;
+		padding-bottom: 0;
+		background-attachment: fixed;
+		@include background-size(cover);
+	}
+}
+
+.slide-summer {
+	text-align: center;
+}
+
+
+//
+// SLIDE FOOTER
+//
+// Slides up into place over final slide
+//
+
+.slide-ftr {
+	text-align: center;
+	@include mq(max, $footer-fixes) {
+		max-width: none;
+		background-color: #000;
+	}
+	@include mq($footer-fixes) {
+		@include absolute(n 0 0 0);
+		min-height: 500px;
+	}
+}
+
 
 
 //

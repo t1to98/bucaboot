@@ -10,6 +10,7 @@ $red: rgb(240,78,48);
 $blue: rgb(0,187,214);
 $blue-dark: rgb(31,32,52);
 $blue-dk: $blue-dark;
+$navy: $blue-dark;
 $orange: rgb(244,121,32);
 $beige: rgb(255,254,242);
 
@@ -29,8 +30,18 @@ $mono:"Courier New",Courier,mono;
 // Sizes ------------------------------------ //
 
 $break-sm: 420px;
+$break-md: 768px;
+$break-lg: 960px;
+
+$footer-fixes: 920px;
+
 
 // Paths ------------------------------------ //
 
 $rgba-bg-path: "rgba-bg/";
 $svg-path: "icons/";
+
+
+// Global Vars ------------------------------------ //
+
+$site-padding: 20px;

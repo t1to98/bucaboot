@@ -8,12 +8,12 @@
 
 		<link rel="stylesheet" href="css/screen.css">
 
-		<script type="text/javascript" src="/components/modernizr/modernizr.js"></script>
+		<script type="text/javascript" src="/bower_components/modernizr/modernizr.js"></script>
 
 		<!-- Google Webfonts -->
 		<script type="text/javascript">
 		  WebFontConfig = {
-		    google: { families: [ 'Raleway:500,700:latin' ] }
+		    google: { families: [ 'Raleway:300,500,700:latin' ] }
 		  };
 		  (function() {
 		    var wf = document.createElement('script');
@@ -27,59 +27,137 @@
 	</head>
 	<body class="page-hp">
 
-		<section class="hp-content">
+		<section class="hp-intro">
+			<div class="foreground">
 
-			<div class="hp-content-inner">
-				<!-- Logo & Intro -->
+				<div class="foreground-inner">
+					<!-- Logo & Intro -->
 
-				<h1 class="logo-h">
-					<i class="logo-h-txt a11y-only">Buca Boot</i>
-				    <img class="logo-img logo-img-svg" src="img/icons/logo-wht-lg.svg" />
-				</h1>
+					<h1 class="logo-h">
+						<i class="logo-h-txt a11y-only">Buca Boot</i>
+					    <img class="logo-img logo-img-svg" src="img/icons/logo-wht-lg.svg" />
+					</h1>
 
-				<h2 class="intro-txt">Secure, flexible bike storage that lets you go where you want, when you want. Stop&nbsp;worrying about your&nbsp;stuff&nbsp;&amp;&nbsp;go!</h2>
+					<h2 class="intro-txt">Secure, flexible storage for&nbsp;the practical&nbsp;biker. Stop&nbsp;worrying about&nbsp;your&nbsp;stuff&nbsp;&amp;&nbsp;go!</h2>
 
-				<!-- Video Button -->
-				<a class="btn-large l-narrow js-popup-iframe" href="https://vimeo.com/73281165" target="_blank">Watch the video</a>
+					<!-- Video Button -->
+					<a class="btn-large l-narrow js-popup-iframe" href="https://vimeo.com/73281165" target="_blank">Watch the video</a>
 
 
+					<!-- Down Arrow -->
+					<i class="intro-arrow"></i>
 
-				<!-- Email Signup -->
 
-				<div id="mc_embed_signup" class="mc-mod l-narrow">
-					<form action="http://bucaboot.us7.list-manage1.com/subscribe/post?u=5752a95bb79b69fc89b39e37a&amp;id=31f4699415" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						
-					<div class="mc-field-group">
-						<label class="section-h" for="mce-EMAIL">Join Our Mailing List</label>
-						<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
+					<!-- Email Signup -->
+					<div id="mc_embed_signup" class="mc-mod l-narrow">
+						<form action="http://bucaboot.us7.list-manage1.com/subscribe/post?u=5752a95bb79b69fc89b39e37a&amp;id=31f4699415" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							
+						<div class="mc-field-group">
+							<label class="section-h" for="mce-EMAIL">Join Our Mailing List</label>
+							<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
+						</div>
+							<div id="mce-responses" class="mce-responses">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>	
+							<input type="submit" value="&rarr;" name="subscribe" id="mc-embedded-subscribe" class="mc-submit">
+						</form>
 					</div>
-						<div id="mce-responses" class="mce-responses">
-							<div class="response" id="mce-error-response" style="display:none"></div>
-							<div class="response" id="mce-success-response" style="display:none"></div>
-						</div>	
-						<input type="submit" value="&rarr;" name="subscribe" id="mc-embedded-subscribe" class="mc-submit">
-					</form>
-				</div>
-			</div> <!-- /hp-content-inner -->
+				</div> <!-- /foreground-inner -->
 
 
-			<!-- Social Icons -->
-			<ul class="social-list">
-				<li class="social-item twitter"><a href="https://twitter.com/bucaboot" target="_blank">Twitter</a></li>
-				<li class="social-item facebook"><a href="https://www.facebook.com/bucaboot" target="_blank">Facebook</a></li>
-				<li class="social-item google"><a href="https://plus.google.com/103106248903301572487" rel="publisher" target="_blank">Google Plus</a></li>
-			</ul>
+				<!-- Social Icons -->
+				<ul class="social-list">
+					<li class="social-item twitter"><a href="https://twitter.com/bucaboot" target="_blank">Twitter</a></li>
+					<li class="social-item facebook"><a href="https://www.facebook.com/bucaboot" target="_blank">Facebook</a></li>
+					<li class="social-item google"><a href="https://plus.google.com/103106248903301572487" rel="publisher" target="_blank">Google Plus</a></li>
+				</ul>
 
-		</section> <!-- /hp-content -->
+			</div> <!-- /foreground -->
+		</section> <!-- /hp-intro -->
+
+		<!-- Slide: Lifestyle -->
+		<section class="l-feature slide-lifestyle">
+			<div class="l-feature-cols">
+				<div class="ui-block-1">
+					<img class="resp-img" src="img/slide-flexible.gif" alt="Animation showing the Buca Boot opening (to carry big stuff) and closing (to keep small things safe and dry)." />
+				</div> <!-- /ui-block-1 -->
+				<div class="ui-block-2">
+					<h2 class="h2">Adapts to Your&nbsp;Lifestyle</h2>
+					<p class="txt">The Buca Boot opens to carry big things like groceries and locks to keep your smaller stuff safe. Need more space? No problem. Side panniers are built&nbsp;right&nbsp;in.</p>
+				</div> <!-- /ui-block-2 -->
+			</div> <!-- /l-feature-inner -->
+		</section> <!-- /l-feature -->
+
+		<!-- Slide: Weather -->
+		<section class="l-feature slide-weather">
+			<div class="l-feature-cols-flip">
+				<div class="ui-block-1">
+					<img class="resp-img" src="img/slide-weather.gif" alt="The Buca Boot is weatherproof." />
+				</div> <!-- /ui-block-1 -->
+				<div class="ui-block-2">
+					<h2 class="h2">Works in any&nbsp;Weather</h2>
+					<p class="txt">Leave it outside. Ride in the rain. Heck, put it out in the snow. The Boot is made from molded plastic and has a gasketed lid to keep your stuff safe&nbsp;&amp;&nbsp;dry.</p>
+				</div> <!-- /ui-block-2 -->
+			</div> <!-- /l-feature-inner -->
+		</section> <!-- /l-feature -->
+
+
+		<!-- Slide: Secure -->
+		<section class="l-feature slide-secure">
+			<div class="l-feature-cols">
+				<div class="ui-block-1">
+					<img class="resp-img" src="img/slide-secure.jpg" alt="The Buca Boot is as secure as a car trunk." />
+				</div> <!-- /ui-block-1 -->
+				<div class="ui-block-2">
+					<h2 class="h2">Secure as a Car&nbsp;Trunk</h2>
+					<p class="txt">Our unique hinge mechanism securely locks the lid in place. It attaches to any standard bike rack from the inside so it can’t be removed without unlocking and opening the Boot.</p>
+				</div> <!-- /ui-block-2 -->
+			</div> <!-- /l-feature-inner -->
+		</section> <!-- /l-feature -->
+
+
+		<!-- Slide: Handles -->
+		<section 	class="l-feature slide-handles"
+					data-bottom-top="background-position: 50% 900px;"
+					data-center="background-position: 50% -100px;">
+
+			<!-- Slide: Summer -->
+			<section class="slide-summer site-width">
+				<div class="l-feature-inner"
+					 data-600-bottom="transform: translate3d(0px, 550px, 0);"
+					 data--200-top="transform: translate3d(0px, -100px, 0);">
+					<h2 class="h2">Available This Summer</h2>
+					<p class="txt">Sign up to get yours</p>
+				</div> 			
+			</section> <!-- /l-feature-->
+
+
+		</section> <!-- /l-feature -->
+
+
+		<footer class="slide-ftr foreground">
+			<div class="foreground-inner">
+				<div class="handles-infinity-logo"></div>
+				<h5 class="handles-tagline">Hello Freedom</h5>
+				<dl class="contact-mod">
+					<dt class="contact-h">Contact</dt>
+					<dd class="contact-txt"><a href="mailto:hello@bucaboot.com">hello@bucaboot.com</a></dd>
+				</dl>
+			</div> <!-- /foreground-inner -->
+		</footer> <!-- /slide-ftr -->
+
 
 
 		<!-- Core scripts-->
-		<script src="/components/jquery/jquery.min.js"></script>
-		<script src="/components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-		<!-- <script src="/components/lodash/lodash.js"></script> -->
+		<script src="/bower_components/jquery/jquery.min.js"></script>
+		<script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<script src="/bower_components/skrollr/dist/skrollr.min.js"></script>
+		<script src="/bower_components/jquery.inview/jquery.inview.min.js"></script>
+		<!-- <script src="/bower_components/lodash/lodash.js"></script> -->
 
 		<!-- Compatibility scripts-->
-	    <script src="components/respondjs/dest/respond.min.js"></script>
+	    <script src="bower_components/respondjs/dest/respond.min.js"></script>
 	
 
 		<!-- Extra scripts (like, via Bower)-->
