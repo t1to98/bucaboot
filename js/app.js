@@ -33,10 +33,12 @@ var PrototypeModule = (function() {
 
 		var $ww = $(window).width();
 		var $body = $('body');
+		var $html = $('html');
 
 		/////////////////
 		// Popups
 		/////////////////
+
 
 		// Only intialize on certain pages
 		if ($body.hasClass('page-hp')) {
@@ -56,11 +58,12 @@ var PrototypeModule = (function() {
 		// Parallax
 		/////////////////
 
-		if ($ww >= 920 && $body.hasClass('page-hp')){
+		if($ww >= 920 && $body.hasClass('page-hp') && $html.hasClass('ie') == false) {
 			setTimeout(function(){
 				skrollr.init()
-			}, 300);	
+			}, 300);
 		}
+
 
 
 		/////////////////

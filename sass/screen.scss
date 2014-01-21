@@ -279,11 +279,13 @@ a.link {
 	@include background-size(contain);
 	border-bottom: 0;
 
-	@include mq($footer-fixes) {
-		height: 2000px;
-		padding-bottom: 0;
-		background-attachment: fixed;
-		@include background-size(cover);
+	.skrollr &  {
+		@include mq($footer-fixes) {
+			height: 2000px;
+			padding-bottom: 0;
+			background-attachment: fixed;
+			@include background-size(cover);
+		}
 	}
 }
 
@@ -307,19 +309,24 @@ a.link {
 
 .slide-ftr {
 	text-align: center;
-	@include mq(max, $footer-fixes) {
-		max-width: none;
-		background-color: #000;
-	}
-	@include mq($footer-fixes) {
-		@include absolute(n 0 0 0);
-		min-height: 800px;
+	max-width: none;
+	background-color: #000;
+
+	.skrollr & {
+		@include mq($footer-fixes) {
+			@include absolute(n 0 0 0);
+			min-height: 800px;
+			background-color: rgba(0,0,0,.5);
+			max-width: 650px;
+		}
 	}
 }
 
 .slide-ftr-btm {
-	@include mq($footer-fixes) {
-		@include absolute(n 0 0 0);
+	.skrollr &  {
+		@include mq($footer-fixes) {
+			@include absolute(n 0 0 0);
+		}
 	}
 }
 

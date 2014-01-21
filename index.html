@@ -1,5 +1,9 @@
 <!doctype html>
-<html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]><html class="no-js ie ie9 lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="">
@@ -157,9 +161,6 @@
 
 		<!-- Core scripts-->
 		<script src="/bower_components/jquery/jquery.min.js"></script>
-		<script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-		<script src="/bower_components/skrollr/dist/skrollr.min.js"></script>
-		<script src="/bower_components/jquery.inview/jquery.inview.min.js"></script>
 		<!-- <script src="/bower_components/lodash/lodash.js"></script> -->
 
 		<!-- Compatibility scripts-->
@@ -167,7 +168,12 @@
 	
 
 		<!-- Extra scripts (like, via Bower)-->
-		<!-- ... -->
+		<script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<script src="/bower_components/skrollr/dist/skrollr.min.js"></script>
+		<script src="/bower_components/jquery.inview/jquery.inview.min.js"></script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="/bower_components/skrollr-ie/dist/skrollr.ie.min.js"></script>
+		<![endif]-->
 		
 		<!-- Custom scripts -->
 		<script src="/js/app.js"></script>
