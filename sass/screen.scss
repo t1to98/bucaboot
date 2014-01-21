@@ -30,6 +30,12 @@ body {
 	max-width: 100%;
 }
 
+a.link {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .hp-intro {
 	background: #000 image-url('bucaboot-tight-bw.jpg') no-repeat 50% 50% fixed;
 	@include background-size(cover);
@@ -45,7 +51,7 @@ body {
 	@include trans;
 	@media (min-width: $break-sm) {
 		padding-top: 60px;
-	}	
+	}
 }
 
 .foreground-inner {
@@ -271,6 +277,7 @@ body {
 	margin-bottom: 0;
 	background: transparent image-url('slide-handles.jpg') 50% 100% no-repeat; 
 	@include background-size(contain);
+	border-bottom: 0;
 
 	@include mq($footer-fixes) {
 		height: 2000px;
@@ -282,6 +289,13 @@ body {
 
 .slide-summer {
 	text-align: center;
+	.txt {
+		display: block;
+		margin-bottom: 15px;
+		@include mq($break-sm) {
+			margin-bottom: 30px;
+		}
+	}
 }
 
 
@@ -299,10 +313,40 @@ body {
 	}
 	@include mq($footer-fixes) {
 		@include absolute(n 0 0 0);
-		min-height: 500px;
+		min-height: 800px;
 	}
 }
 
+.slide-ftr-btm {
+	@include mq($footer-fixes) {
+		@include absolute(n 0 0 0);
+	}
+}
+
+.contact-h {
+	font-weight: 700;
+}
+
+.ftr-infinity-logo {
+	display: block;
+	width: 60px;
+	height: 35px;
+	margin: 0 auto 20px;
+	@include svg('infinity-wht-md');
+}
+
+.ftr-tagline-mod {
+	margin-bottom: 60px;
+}
+
+.ftr-tagline {
+	font: 500 em(21)/120% $sans;	
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	@include mq($break-sm) {
+		font-size: em(28);
+	}
+}
 
 
 //
@@ -311,7 +355,7 @@ body {
 
 $mc-height: 45px;
 
-.mc-mod {
+.mc-mod-dark {
 	position: relative;
 }
 
@@ -347,7 +391,7 @@ $mc-height: 45px;
 }
 
 .logo-h,
-.mc-mod,
+.mc-mod-dark,
 .social-list {
 	margin-bottom: 40px;
 
