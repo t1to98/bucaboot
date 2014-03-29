@@ -38,7 +38,7 @@ a.link {
 
 .hp-intro {
 	background: #000 image-url('bucaboot-tight-bw.jpg') no-repeat 50% 50% fixed;
-	@include background-size(cover);
+	background-size: cover;
 	background-attachment: fixed;
 }
 
@@ -147,6 +147,7 @@ a.link {
 	text-align: center;
 
 	position: relative;
+	top: 0;
 	display: block;
 	padding: 20px 10px;	
 	margin-bottom: 65px;
@@ -510,5 +511,35 @@ $mc-height: 45px;
 	color: $red;
 }
 
+
+
+// 
+// Press Page
+//
+
+$press-border: 1px solid rgba(255,255,255,.5);
+$press-spacing: 26px;
+
+.press-list {
+	border-top: $press-border;
+}
+
+.press-item-link {
+	display: block;
+	padding: $press-spacing 20px;
+	border-bottom: $press-border;
+	@include trans;
+	&:hover {
+		background-color: rgba(0,0,0,.35);
+	}
+}
+
+.press-item-h {
+	color: #fff;
+}
+
+.press-item-txt {
+	color: #efefef;
+}
 
 
