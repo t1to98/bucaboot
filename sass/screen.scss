@@ -12,7 +12,7 @@
 
 a 		{ 	text-decoration: none; color: inherit; }
 strong	{	font-weight: bold;	}
-em   	{	font-style: italic;	}
+em   		{	font-style: italic;	}
 i 		{  	font-style: normal; }
 
 body {
@@ -131,8 +131,8 @@ a.link {
 
 // Fade In & Down
 @include keyframes(hover) {
-  0, 100%   { @include translate3d(0, -15px, 0); }
-  55% { @include translate3d(0, 15px, 0); }
+  0%, 100%	 { @include translate3d(0, -15px, 0); }
+  55% 	 { @include translate3d(0, 15px, 0); }
 }
 
 
@@ -335,6 +335,10 @@ a.link {
 	font-weight: 700;
 }
 
+.contact-txt {
+	margin-bottom: 12px;
+}
+
 .ftr-infinity-logo {
 	display: block;
 	width: 60px;
@@ -388,6 +392,7 @@ $mc-height: 45px;
 }
 
 .mc-submit {
+	display: block;
 	color: #000;
 	@include size($mc-height - 10);
 	@include absolute(n 5px 5px n);
@@ -407,6 +412,7 @@ $mc-height: 45px;
 		margin-bottom: 60px;
 	}
 }
+
 
 
 //
