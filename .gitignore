@@ -7,3 +7,4 @@ css/*
 *.DS_Store
 Twig
 vendor
+*.sublime*

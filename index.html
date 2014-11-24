@@ -45,8 +45,10 @@
 					<h2 class="intro-txt">Secure, flexible storage for&nbsp;the practical&nbsp;biker. Stop&nbsp;worrying about&nbsp;your&nbsp;stuff&nbsp;&amp;&nbsp;go!</h2>
 
 					<!-- Video Button -->
-					<a class="btn-large l-narrow js-popup-iframe" href="https://vimeo.com/73281165" target="_blank">Watch the video</a>
+					<a class="btn-large l-narrow video-btn js-popup-iframe" href="https://vimeo.com/73281165" target="_blank">Watch the video</a>
 
+					<!-- Pre-Order -->
+					<a class="btn-large--light order-btn l-narrow" data-celery="54696b734457df05003627e9" data-celery-version="v2">Pre-Order</a>
 
 					<!-- Down Arrow -->
 					<i class="intro-arrow"></i>
@@ -85,7 +87,7 @@
 
 		<!-- Slide: Secure -->
 		<section class="l-feature slide-secure">
-			<div class="l-feature-cols">
+			<div class="l-feature-cols l-feature-cols--secure">
 				<div class="ui-block-1">
 					<img class="resp-img" src="img/slide-secure.jpg" alt="The Buca Boot is as secure as a car trunk." />
 				</div> <!-- /ui-block-1 -->
@@ -94,7 +96,14 @@
 					<p class="txt">Our unique hinge mechanism securely locks the lid in place. It attaches to any standard bike rack from the inside so it can’t be removed without unlocking and opening the Boot.</p>
 				</div> <!-- /ui-block-2 -->
 			</div> <!-- /l-feature-inner -->
+
+			<div class="order-mod-bottom">
+				<a class="btn-large order-btn-bottom l-narrow" data-celery="54696b734457df05003627e9" data-celery-version="v2">Pre-Order</a>
+				<h4 class="txt">Available Spring 2015</h4>
+			</div> <!-- -->
+
 		</section> <!-- /l-feature -->
+
 
 
 		<!-- Slide: Handles -->
@@ -108,20 +117,20 @@
 					 data-600-bottom="transform: translate3d(0px, 550px, 0);"
 					 data--200-top="transform: translate3d(0px, -100px, 0);">
 
-					<h2 class="h2">Available Spring 2015</h2>
+					<h2 class="h2">Stay in the Know</h2>
 
 					<!-- Email Signup -->
 					<div id="mc_embed_signup" class="mc-mod-dark mc-mod-signup l-narrow">
 						<form action="http://bucaboot.us7.list-manage1.com/subscribe/post?u=5752a95bb79b69fc89b39e37a&amp;id=31f4699415" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-							
+
 						<div class="mc-field-group">
-							<label class="txt" for="mce-EMAIL">Sign up to get yours</label>
+							<label class="txt" for="mce-EMAIL">with all the latest Buca Boot news</label>
 							<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
 						</div>
 							<div id="mce-responses" class="mce-responses">
 								<div class="response" id="mce-error-response" style="display:none"></div>
 								<div class="response" id="mce-success-response" style="display:none"></div>
-							</div>	
+							</div>
 							<input type="submit" value="&rarr;" name="subscribe" id="mc-embedded-subscribe" class="mc-submit">
 						</form>
 
@@ -165,11 +174,12 @@
 
 		<!-- Core scripts-->
 		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 		<!-- <script src="/bower_components/lodash/lodash.js"></script> -->
 
 		<!-- Compatibility scripts-->
 	    <script src="bower_components/respondjs/dest/respond.min.js"></script>
-	
+
 
 		<!-- Extra scripts (like, via Bower)-->
 		<script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
@@ -178,7 +188,7 @@
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="/bower_components/skrollr-ie/dist/skrollr.ie.min.js"></script>
 		<![endif]-->
-		
+
 		<!-- Custom scripts -->
 		<script src="/js/app.js"></script>
 
