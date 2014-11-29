@@ -28,15 +28,20 @@ body {
 //
 
 $nav-padding: 20px;
+$nav-padding--small: 10px;
 $bp--full-nav: 500px;
 
 .siteNav {
 	display: block;
 	background-color: #000;
-	padding-left: $nav-padding;
-	padding-right: $nav-padding;
+	padding-left: $nav-padding--small;
+	padding-right: $nav-padding--small;
 	@include user-select;
 	@include pie-clearfix;
+	@include mq($bp--full-nav) {
+		padding-left: $nav-padding;
+		padding-right: $nav-padding;
+	}
 }
 
 .siteNav--home {
@@ -57,7 +62,7 @@ $bp--full-nav: 500px;
 	float: right;
 
 	font: 700 14px $sans;
-	padding: 8px 14px;
+	padding: 8px 10px;
 	margin-top: 12px;
 	background-color: #fff;
 	color: #000;
@@ -67,6 +72,11 @@ $bp--full-nav: 500px;
 	&:hover {
 		color: $red;
 		cursor: pointer;
+	}
+
+	@include mq($bp--full-nav) {
+		padding-left: 14px;
+		padding-right: 14px;
 	}
 }
 
@@ -93,7 +103,7 @@ $bp--full-nav: 500px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #fff;
-	padding: 19px 12px $nav-padding;
+	padding: 19px 10px $nav-padding;
 	transition: all .2s ease-in;
 
 	&:hover {
@@ -446,14 +456,35 @@ a.link {
 	margin-bottom: 16px;
 }
 
+$bp--color-layout: 500px;
+
+.slide-colors {
+	padding-top: 80px;
+
+	@include mq($break-sm, $break-lg) {
+		padding-bottom: 40px;
+	}
+	@include mq($break-lg) {
+		padding-top: 100px;
+		padding-bottom: 60px;
+	}
+}
+
 .l-colors {
-	@include media-grid(3, 20px, '.color');
+	@include mq($bp--color-layout) {
+		@include media-grid(3, 20px, '.color');
+	}
 }
 
 .color {
 	display: block;
-	text-align: center;
 	cursor: pointer;
+	text-align: center;
+	margin-bottom: 24px;
+
+	@include mq($bp--color-layout) {
+		margin-bottom: 0;
+	}
 }
 
 .color-img {
@@ -462,6 +493,7 @@ a.link {
 	margin-bottom: 12px;
 	top: 0;
 	transition: all .2s ease-in;
+
 	.color:hover & {
 		top: -4px;
 	}
@@ -485,7 +517,7 @@ a.link {
 	color: $navy;
 	border-top: 3px solid $navy;
 	border-bottom: 1px solid $navy;
-	@include absolute(0 0 n 0);
+	@include absolute(-1px 0 n 0);
 }
 
 
