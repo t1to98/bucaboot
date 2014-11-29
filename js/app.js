@@ -10,7 +10,7 @@ var PrototypeModule = (function() {
 	};
 
 	Module.teardown = function() {
-		// detach event handlers when destroying an 
+		// detach event handlers when destroying an
 		// instance of this obj
 
 		// ex: $('body').off('click');
@@ -55,6 +55,24 @@ var PrototypeModule = (function() {
 
 
 		/////////////////
+		// Navigation
+		/////////////////
+
+        // Show/Hide Navigation
+        $('.js-navTrigger').on('click', function(e) {
+            e.preventDefault();
+
+            if ($body.hasClass('siteNav-active')) {
+					$body.addClass('siteNav-hiding');
+					$body.removeClass('siteNav-active');
+            } else {
+					$body.addClass('siteNav-active');
+					$body.removeClass('siteNav-hiding');
+            }
+        });
+
+
+		/////////////////
 		// Parallax
 		/////////////////
 
@@ -70,14 +88,14 @@ var PrototypeModule = (function() {
 		// In View
 		/////////////////
 
-		// Remove hover animation class when not in view. 
-		// Fixes bug where fixed background images disappear. 
+		// Remove hover animation class when not in view.
+		// Fixes bug where fixed background images disappear.
 		$('.intro-arrow').bind('inview', function(event, visible) {
 			var $this = $(this);
 			if (visible) {
 				$this.addClass('hover-anim');
 			} else {
-				$this.removeClass('hover-anim');				
+				$this.removeClass('hover-anim');
 			}
 		});
 
