@@ -7,6 +7,6 @@
 	"modernizr": "latest",
 	"lodash": "latest",
 	"respondjs": "https://github.com/scottjehl/Respond.git",
-  "ups-sass-patterns": "git@github.com:Upstatement/ups-sass-patterns.git"
+   "Upbase": "git@github.com:Upstatement/upbase.git"
   }
 }
