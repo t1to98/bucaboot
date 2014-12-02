@@ -12,7 +12,8 @@ line_comments = false
 output_style = :expanded
 #:compressed :expanded
 
-add_import_path "bower_components/ups-sass-patterns"
+# This line tells compass to look at the Upbase styles in your bower_components dir
+add_import_path "bower_components/Upbase/components"
 
 # Add Autoprefixer Support
 # https://github.com/ai/autoprefixer#usage

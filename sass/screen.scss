@@ -71,7 +71,7 @@ $bp--full-nav: 500px;
 	background-color: #fff;
 	color: #000;
 	border-radius: 6px;
-	transition: all .2s ease-in;
+	@include trans;
 
 	&:hover {
 		color: $red;
